@@ -2,88 +2,83 @@ import { createTheme } from '@mui/material';
 import { THEME } from './theme';
 
 const christmasTheme = createTheme({
-  palette: {
-    primary: {
-      main: '#b31217',
+    ...THEME,
+    palette: {
+        ...THEME.palette,
+        primary: {
+            main: '#b31217',
+        },
+        secondary: {
+            main: '#006400',
+        },
+        navbar: {
+            main: '#FFD700',
+        },
     },
-    secondary: {
-      main: '#006400',
-    },
-    sleeper: {
-        main: '#121428',
-        secondary: '#1A1D3A',
-        tertiary: '#E5E9F2',
-        quaternary: '#00F0FF',
-    }
-  },
 });
 
 const halloweenTheme = createTheme({
-  palette: {
-    primary: {
-      main: '#ff6600',
+    ...THEME,
+    palette: {
+        ...THEME.palette,
+        primary: {
+            main: '#ff6600',
+        },
+        secondary: {
+            main: '#000000',
+        },
+        navbar: {
+            main: '#4B0082',
+        },
     },
-    secondary: {
-      main: '#000000',
-    },
-    sleeper: {
-        main: '#121428',
-        secondary: '#1A1D3A',
-        tertiary: '#E5E9F2',
-        quaternary: '#00F0FF',
-    }
-  },
 });
 
 const valentinesTheme = createTheme({
-  palette: {
-    primary: {
-      main: '#ff007f',
+    ...THEME,
+    palette: {
+        ...THEME.palette,
+        primary: {
+            main: '#ff007f',
+        },
+        secondary: {
+            main: '#ffc0cb',
+        },
+        navbar: {
+            main: '#8B0000',
+        },
     },
-    secondary: {
-      main: '#ffc0cb',
-    },
-    sleeper: {
-        main: '#121428',
-        secondary: '#1A1D3A',
-        tertiary: '#E5E9F2',
-        quaternary: '#00F0FF',
-    }
-  },
 });
 
 const stPattysTheme = createTheme({
-  palette: {
-    primary: {
-      main: '#006400',
+    ...THEME,
+    palette: {
+        ...THEME.palette,
+        primary: {
+            main: '#006400',
+        },
+        secondary: {
+            main: '#ffd700',
+        },
+        navbar: {
+            main: '#98FB98',
+        },
     },
-    secondary: {
-      main: '#ffd700',
-    },
-    sleeper: {
-        main: '#121428',
-        secondary: '#1A1D3A',
-        tertiary: '#E5E9F2',
-        quaternary: '#00F0FF',
-    }
-  },
 });
 
 const summerTheme = createTheme({
-  palette: {
-    primary: {
-      main: '#ffff00',
+    ...THEME,
+    palette: {
+        ...THEME.palette,
+        primary: {
+            main: '#ffff00',
+        },
+        secondary: {
+            main: '#00bfff',
+        },
+        navbar: {
+            main: '#FFA500',
+        },
     },
-    secondary: {
-      main: '#00bfff',
-    },
-    sleeper: {
-        main: '#121428',
-        secondary: '#1A1D3A',
-        tertiary: '#E5E9F2',
-        quaternary: '#00F0FF',
-    }
-  },
 });
 
 export const getTheme = (theme: string) => {

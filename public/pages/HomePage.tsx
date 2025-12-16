@@ -29,13 +29,28 @@ export const HomePage = () => {
         >
             <div style={{ position: 'absolute', top: 10, left: 10 }}>
                 <FormControl sx={{ m: 1, minWidth: 120 }} size="small">
-                    <InputLabel id="theme-select-label">Theme</InputLabel>
+                    <InputLabel id="theme-select-label" sx={{ color: theme.palette.common.black }}>Theme</InputLabel>
                     <Select
                         labelId="theme-select-label"
                         id="theme-select"
                         value={currentTheme}
                         label="Theme"
                         onChange={handleThemeChange}
+                        sx={{
+                            color: theme.palette.common.black,
+                            '.MuiOutlinedInput-notchedOutline': {
+                                borderColor: theme.palette.common.black,
+                            },
+                            '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
+                                borderColor: theme.palette.common.black,
+                            },
+                            '&:hover .MuiOutlinedInput-notchedOutline': {
+                                borderColor: theme.palette.common.black,
+                            },
+                            '.MuiSvgIcon-root': {
+                                fill: theme.palette.common.black,
+                            },
+                        }}
                     >
                         <MenuItem value="default">Default</MenuItem>
                         <MenuItem value="christmas">Christmas</MenuItem>
