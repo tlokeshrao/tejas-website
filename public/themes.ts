@@ -86,10 +86,10 @@ const georgiaTechTheme = createTheme({
     palette: {
         ...THEME.palette,
         primary: {
-            main: '#003057', // GT Navy Blue
+            main: '#B3A369', // GT Old Gold
         },
         secondary: {
-            main: '#B3A369', // GT Old Gold
+            main: '#003057', // GT Navy Blue
         },
         navbar: {
             main: '#FFFFFF', // White
