@@ -9,6 +9,12 @@ const christmasTheme = createTheme({
     secondary: {
       main: '#006400',
     },
+    sleeper: {
+        main: '#121428',
+        secondary: '#1A1D3A',
+        tertiary: '#E5E9F2',
+        quaternary: '#00F0FF',
+    }
   },
 });
 
@@ -20,6 +26,12 @@ const halloweenTheme = createTheme({
     secondary: {
       main: '#000000',
     },
+    sleeper: {
+        main: '#121428',
+        secondary: '#1A1D3A',
+        tertiary: '#E5E9F2',
+        quaternary: '#00F0FF',
+    }
   },
 });
 
@@ -31,6 +43,12 @@ const valentinesTheme = createTheme({
     secondary: {
       main: '#ffc0cb',
     },
+    sleeper: {
+        main: '#121428',
+        secondary: '#1A1D3A',
+        tertiary: '#E5E9F2',
+        quaternary: '#00F0FF',
+    }
   },
 });
 
@@ -42,6 +60,12 @@ const stPattysTheme = createTheme({
     secondary: {
       main: '#ffd700',
     },
+    sleeper: {
+        main: '#121428',
+        secondary: '#1A1D3A',
+        tertiary: '#E5E9F2',
+        quaternary: '#00F0FF',
+    }
   },
 });
 
@@ -53,6 +77,12 @@ const summerTheme = createTheme({
     secondary: {
       main: '#00bfff',
     },
+    sleeper: {
+        main: '#121428',
+        secondary: '#1A1D3A',
+        tertiary: '#E5E9F2',
+        quaternary: '#00F0FF',
+    }
   },
 });
 
