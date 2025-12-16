@@ -58,6 +58,7 @@ export const HomePage = () => {
                         <MenuItem value="valentines">Valentines</MenuItem>
                         <MenuItem value="stPattys">St. Patty's</MenuItem>
                         <MenuItem value="summer">Summer</MenuItem>
+                        <MenuItem value="georgiaTech">Georgia Tech</MenuItem>
                     </Select>
                 </FormControl>
             </div>

@@ -6,13 +6,13 @@ const christmasTheme = createTheme({
     palette: {
         ...THEME.palette,
         primary: {
-            main: '#b31217',
+            main: '#C41E3A', // Cardinal Red
         },
         secondary: {
-            main: '#006400',
+            main: '#228B22', // Forest Green
         },
         navbar: {
-            main: '#FFD700',
+            main: '#B8860B', // Dark Goldenrod
         },
     },
 });
@@ -22,13 +22,13 @@ const halloweenTheme = createTheme({
     palette: {
         ...THEME.palette,
         primary: {
-            main: '#ff6600',
+            main: '#D35400', // Pumpkin Orange
         },
         secondary: {
-            main: '#000000',
+            main: '#34495E', // Wet Asphalt
         },
         navbar: {
-            main: '#4B0082',
+            main: '#8E44AD', // Wisteria Purple
         },
     },
 });
@@ -38,13 +38,13 @@ const valentinesTheme = createTheme({
     palette: {
         ...THEME.palette,
         primary: {
-            main: '#ff007f',
+            main: '#E91E63', // Soft Pink
         },
         secondary: {
-            main: '#ffc0cb',
+            main: '#F8BBD0', // Lighter Pink
         },
         navbar: {
-            main: '#8B0000',
+            main: '#C2185B', // Deeper Pink
         },
     },
 });
@@ -54,13 +54,13 @@ const stPattysTheme = createTheme({
     palette: {
         ...THEME.palette,
         primary: {
-            main: '#006400',
+            main: '#1E8449', // Kelly Green
         },
         secondary: {
-            main: '#ffd700',
+            main: '#F1C40F', // Gold
         },
         navbar: {
-            main: '#98FB98',
+            main: '#D4AC0D', // Darker Gold
         },
     },
 });
@@ -70,13 +70,29 @@ const summerTheme = createTheme({
     palette: {
         ...THEME.palette,
         primary: {
-            main: '#ffff00',
+            main: '#F4D03F', // Sunflower Yellow
         },
         secondary: {
-            main: '#00bfff',
+            main: '#5DADE2', // Sky Blue
         },
         navbar: {
-            main: '#FFA500',
+            main: '#E67E22', // Carrot Orange
+        },
+    },
+});
+
+const georgiaTechTheme = createTheme({
+    ...THEME,
+    palette: {
+        ...THEME.palette,
+        primary: {
+            main: '#B3A369', // GT Old Gold
+        },
+        secondary: {
+            main: '#002D56', // GT Navy Blue
+        },
+        navbar: {
+            main: '#FFFFFF', // White
         },
     },
 });
@@ -93,6 +109,8 @@ export const getTheme = (theme: string) => {
       return stPattysTheme;
     case 'summer':
       return summerTheme;
+    case 'georgiaTech':
+      return georgiaTechTheme;
     default:
       return THEME;
   }
