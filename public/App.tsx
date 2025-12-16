@@ -1,10 +1,10 @@
-import { CssBaseline, ThemeProvider } from '@mui/material';
-import { THEME } from './theme';
+import { CssBaseline } from '@mui/material';
 import { Router } from './pages/Router';
+import { ThemeProvider } from './ThemeContext';
 
 const App = () => {
     return (
-        <ThemeProvider theme={THEME}>
+        <ThemeProvider>
             <CssBaseline />
             <Router />
         </ThemeProvider>
