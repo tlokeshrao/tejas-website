@@ -10,17 +10,9 @@ interface LegoBlockProps {
 
 const LegoBlock: FC<LegoBlockProps> = ({ color, x, y, size=1, delay=0 }) => {
   const [visible, setVisible] = useState(false);
-
-  useEffect(() => { 
-    const t=setTimeout(()=>setVisible(true),delay); 
-    return ()=>clearTimeout(t); 
-  },[delay]);
-
+  useEffect(() => { const t=setTimeout(()=>setVisible(true),delay); return ()=>clearTimeout(t); },[delay]);
   const w=48*size, h=32*size, studR=7*size;
-  const studs = size>=2
-    ? [{cx:w*0.28,cy:studR*0.9},{cx:w*0.72,cy:studR*0.9}]
-    : [{cx:w*0.5,cy:studR*0.9}];
-
+  const studs = size>=2?[{cx:w*0.28,cy:studR*0.9},{cx:w*0.72,cy:studR*0.9}]:[{cx:w*0.5,cy:studR*0.9}];
   return (
     <div style={{position:"absolute",left:x,top:y,opacity:visible?1:0,transform:visible?"translateY(0) rotate(0deg)":"translateY(-40px) rotate(-15deg)",transition:`opacity 0.6s ${delay}ms, transform 0.6s ${delay}ms cubic-bezier(0.34,1.56,0.64,1)`}}>
       <svg width={w} height={h+studR*1.4} viewBox={`0 0 ${w} ${h+studR*1.4}`}>
