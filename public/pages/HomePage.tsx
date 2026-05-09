@@ -58,16 +58,12 @@ const HomePage: FC = () => {
 
         <div style={{opacity:vis.s?1:0,transform:vis.s?"translateY(0)":"translateY(20px)",transition:"all 0.7s ease 0.1s"}}>
           <p style={{fontFamily:"'DM Sans', sans-serif",fontSize:"clamp(1rem,2.5vw,1.35rem)",color:"rgba(255,255,255,0.5)",marginTop:"1rem",marginBottom:"2rem",fontWeight:300,letterSpacing:"0.02em"}}>
-            software engineer · ml enthusiast · lego aficionado
+            software engineer · lego aficionado
           </p>
         </div>
 
         <div style={{opacity:vis.tags?1:0,transform:vis.tags?"translateY(0)":"translateY(15px)",transition:"all 0.6s ease",display:"flex",flexDirection:"column",alignItems:"center",gap:"1.5rem"}}>
           <div style={{display:"flex",flexWrap:"wrap",gap:"10px",justifyContent:"center",maxWidth:"540px"}}>
-            {["builder","ml nerd","ff commissioner","deloitte swe","disc golfer"].map((t,i)=>(
-              <span key={i} className="tag-pill" style={{background:"rgba(255,255,255,0.06)",border:"1px solid rgba(255,255,255,0.12)",color:"rgba(255,255,255,0.7)",padding:"8px 18px",borderRadius:"999px",fontFamily:"'DM Sans', sans-serif",fontSize:"14px"}}>{t}</span>
-            ))}
-            
             <button className="gt-btn" onClick={()=>setGtClicked(c=>!c)} style={{background:gtClicked?"rgba(179,163,105,0.2)":"rgba(255,255,255,0.06)",border:gtClicked?"1px solid rgba(179,163,105,0.6)":"1px solid rgba(255,255,255,0.12)",color:gtClicked?"#B3A369":"rgba(255,255,255,0.7)",padding:"8px 18px",borderRadius:"999px",fontFamily:"'DM Sans', sans-serif",fontSize:"14px",cursor:"pointer",fontWeight:gtClicked?"600":"400",transition:"all 0.2s"}}>
               {gtClicked?"🐝 go jackets!":"georgia tech alum"}
             </button>
