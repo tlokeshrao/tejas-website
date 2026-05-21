@@ -28,7 +28,7 @@ const PingPongModal: FC<PingPongModalProps> = ({ onClose }) => {
                 <p style={{fontFamily:"'DM Sans', sans-serif",fontSize:"12px",color:"rgba(255,255,255,0.4)",margin:0}}>challenge tejas to a match</p>
               </div>
             </div>
-            {([{k:"name",label:"your name",ph:"John Doe",t:"text"},{k:"email",label:"your email",ph:"john@email.com",t:"email"},{k:"time",label:"preferred time",ph:"e.g. Saturday afternoons",t:"text"},{k:"place",label:"preferred place",ph:"e.g. Crystal City Sports Pub",t:"text"}] as const).map(f=>(
+            {([{k:"name",label:"who",ph:"John Doe",t:"text"},{k:"time",label:"when",ph:"e.g. Saturday afternoons",t:"text"},{k:"place",label:"where",ph:"e.g. Crystal City Sports Pub",t:"text"}, {k:"email",label:"email",ph:"john@email.com",t:"email"}] as const).map(f=>(
               <div key={f.k} style={{marginBottom:"0.9rem"}}>
                 <label style={{display:"block",fontFamily:"'DM Sans', sans-serif",fontSize:"11px",color:"rgba(255,255,255,0.4)",textTransform:"uppercase",letterSpacing:"0.08em",marginBottom:"5px"}}>{f.label}</label>
                 <input type={f.t} placeholder={f.ph} value={form[f.k]} onChange={e=>set(f.k,e.target.value)} style={{width:"100%",background:"rgba(255,255,255,0.06)",border:"1px solid rgba(255,255,255,0.1)",borderRadius:"8px",padding:"9px 12px",color:"#fff",fontFamily:"'DM Sans', sans-serif",fontSize:"14px",outline:"none",boxSizing:"border-box"}}/>

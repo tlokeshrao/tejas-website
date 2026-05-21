@@ -25,7 +25,6 @@ interface Education {
   deg: string;
   school: string;
   period: string;
-  gpa: string;
   extra: string;
 }
 
@@ -61,8 +60,8 @@ const ResumePage: FC = () => {
   ];
 
   const education: Education[] = [
-    {deg:"MS Computer Science — Machine Learning",school:"Georgia Institute of Technology",period:"Aug 2023 – May 2024",gpa:"3.75",extra:"TA: Computing, Society & Professionalism · Deep RL · Computer Vision · Game AI"},
-    {deg:"BS Computer Science",school:"Georgia Institute of Technology",period:"Aug 2020 – May 2023",gpa:"4.0",extra:"Faculty Honors · DSA · Systems & Networks · NLP · ML · Intro to AI"}
+    {deg:"MS Computer Science — Machine Learning",school:"Georgia Institute of Technology",period:"Aug 2023 – May 2024",extra:"TA: Computing, Society & Professionalism · Deep RL · Computer Vision · Game AI"},
+    {deg:"BS Computer Science",school:"Georgia Institute of Technology",period:"Aug 2020 – May 2023",extra:"Faculty Honors · DSA · Systems & Networks · NLP · ML · Intro to AI"}
   ];
 
   const Section: FC<{title: string; children: React.ReactNode}> = ({title,children})=>(<div style={{marginBottom:"2.5rem"}}><div style={{display:"flex",alignItems:"center",gap:"1rem",marginBottom:"1.25rem"}}><h2 style={{fontFamily:"'Fredoka One', cursive",fontSize:"1.4rem",color:"#FFD700",margin:0}}>{title}</h2><div style={{flex:1,height:"1px",background:"rgba(255,215,0,0.2)"}}/></div>{children}</div>);
@@ -82,7 +81,7 @@ const ResumePage: FC = () => {
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
                 github
               </a>
-              {["Top Secret Clearance","GT MS CS 3.75","GT BS CS 4.0"].map(b=>(<span key={b} style={{background:"rgba(255,215,0,0.1)",border:"1px solid rgba(255,215,0,0.25)",color:"#FFD700",padding:"5px 14px",borderRadius:"999px",fontFamily:"'DM Sans', sans-serif",fontSize:"13px"}}>{b}</span>))}
+              {["Top Secret Clearance"].map(b=>(<span key={b} style={{background:"rgba(255,215,0,0.1)",border:"1px solid rgba(255,215,0,0.25)",color:"#FFD700",padding:"5px 14px",borderRadius:"999px",fontFamily:"'DM Sans', sans-serif",fontSize:"13px"}}>{b}</span>))}
             </div>
           </div>
           <button className="dl-btn" onClick={downloadResume} style={{background:"#FFD700",border:"none",borderRadius:"10px",padding:"10px 20px",color:"#0f0f14",fontFamily:"'DM Sans', sans-serif",fontSize:"14px",fontWeight:700,cursor:"pointer",display:"flex",alignItems:"center",gap:"8px",whiteSpace:"nowrap",flexShrink:0,transition:"opacity 0.2s"}}>
@@ -104,7 +103,7 @@ const ResumePage: FC = () => {
 
         <Section title="Education">
           {education.map((e,i)=>(
-            <Card key={i}><div style={{display:"flex",justifyContent:"space-between",flexWrap:"wrap",gap:"1rem"}}><div><div style={{fontFamily:"'DM Sans', sans-serif",fontWeight:600,fontSize:"15px",color:"#fff"}}>{e.deg}</div><div style={{fontFamily:"'DM Sans', sans-serif",fontSize:"13px",color:"#FFD700",marginTop:"2px"}}>{e.school}</div><div style={{fontFamily:"'DM Sans', sans-serif",fontSize:"12px",color:"rgba(255,255,255,0.35)",marginTop:"6px"}}>{e.extra}</div></div><div style={{textAlign:"right",flexShrink:0}}><div style={{fontFamily:"'DM Sans', sans-serif",fontSize:"12px",color:"rgba(255,255,255,0.35)"}}>{e.period}</div><div style={{fontFamily:"'Fredoka One', cursive",fontSize:"1.25rem",color:"#00A550",marginTop:"4px"}}>GPA {e.gpa}</div></div></div></Card>
+            <Card key={i}><div style={{display:"flex",justifyContent:"space-between",flexWrap:"wrap",gap:"1rem"}}><div><div style={{fontFamily:"'DM Sans', sans-serif",fontWeight:600,fontSize:"15px",color:"#fff"}}>{e.deg}</div><div style={{fontFamily:"'DM Sans', sans-serif",fontSize:"13px",color:"#FFD700",marginTop:"2px"}}>{e.school}</div><div style={{fontFamily:"'DM Sans', sans-serif",fontSize:"12px",color:"rgba(255,255,255,0.35)",marginTop:"6px"}}>{e.extra}</div></div><div style={{textAlign:"right",flexShrink:0}}><div style={{fontFamily:"'DM Sans', sans-serif",fontSize:"12px",color:"rgba(255,255,255,0.35)"}}>{e.period}</div><div style={{fontFamily:"'Fredoka One', cursive",fontSize:"1.25rem",color:"#00A550",marginTop:"4px"}}></div></div></div></Card>
           ))}
         </Section>
 
