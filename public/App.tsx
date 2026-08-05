@@ -6,6 +6,8 @@ import HomePage from "./pages/HomePage";
 import ResumePage from "./pages/ResumePage";
 import NowPage from "./pages/NowPage";
 import ThingsPage from "./pages/ThingsPage";
+import FantasyPage from "./pages/FantasyPage";
+import LotteryPage from "./pages/LotteryPage";
 
 const App: FC = () => (
   <HashRouter>
@@ -13,6 +15,8 @@ const App: FC = () => (
     <Nav />
     <Routes>
       <Route path="/" element={<HomePage />} />
+      <Route path="/fantasy" element={<FantasyPage />} />
+      <Route path="/fantasy/lottery" element={<LotteryPage />} />
       <Route path="/resume" element={<ResumePage />} />
       <Route path="/now" element={<NowPage />} />
       <Route path="/things" element={<ThingsPage />} />

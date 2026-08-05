@@ -1,6 +1,8 @@
 import React, { useState, useEffect, FC } from "react";
+import { useNavigate } from "react-router-dom";
 
 const ThingsPage: FC = () => {
+  const navigate = useNavigate();
   const [blink, setBlink] = useState(true);
 
   useEffect(() => {
@@ -33,6 +35,28 @@ const ThingsPage: FC = () => {
         @keyframes flicker{0%,89%,91%,93%,100%{opacity:1}90%,92%{opacity:0.6}}`}</style>
       
       <div style={{textAlign:"center"}}>
+        <div style={{marginBottom:"2.5rem",paddingBottom:"2.5rem",borderBottom:"1px solid rgba(255,255,255,0.08)"}}>
+          <button
+            onClick={() => navigate("/fantasy")}
+            style={{
+              display: "block",
+              margin: "0 auto",
+              background: "rgba(255,215,0,0.08)",
+              border: "1px solid rgba(255,215,0,0.38)",
+              color: "#FFD700",
+              fontFamily: "'DM Sans', sans-serif",
+              fontSize: "14px",
+              fontWeight: 600,
+              letterSpacing: "0.04em",
+              padding: "10px 18px",
+              borderRadius: "10px",
+              cursor: "pointer",
+            }}
+          >
+            fantasy countdown
+          </button>
+        </div>
+
         <div style={{position:"relative",width:"156px",height:"108px",margin:"0 auto 2.5rem"}}>
           {bricks.map((b,i)=>{
             const w=48,h=28,sR=6;
