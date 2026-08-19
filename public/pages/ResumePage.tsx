@@ -1,6 +1,7 @@
 import React, { FC } from "react";
 
 const RESUME_PDF_B64 = "not working rn";
+
 interface Job {
   title: string;
   company: string;
@@ -27,19 +28,6 @@ interface Education {
   period: string;
   extra: string;
 }
-
-const downloadResume = () => {
-  const b = atob(RESUME_PDF_B64);
-  const bytes = new Uint8Array(b.length);
-  for (let i=0;i<b.length;i++) bytes[i]=b.charCodeAt(i);
-  const blob = new Blob([bytes],{type:"application/pdf"});
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement("a");
-  a.href=url;
-  a.download="Tejas_Lokeshrao_Resume.pdf";
-  a.click();
-  URL.revokeObjectURL(url);
-};
 
 const projects_data: Project[] = [
   {name:"Hateful Memes Detection",stack:"Python · PyTorch · Transformers",period:"Aug–Dec 2023",bullets:["Ensemble model (HateCLIPper intermediate fusion) for multimodal classification — AUROC 0.865, beating the research benchmark.","Benchmarked early-fusion with image captioning across GPT-2, DistilBERT, and LLMs."]},
@@ -84,9 +72,9 @@ const ResumePage: FC = () => {
               {["Top Secret Clearance"].map(b=>(<span key={b} style={{background:"rgba(255,215,0,0.1)",border:"1px solid rgba(255,215,0,0.25)",color:"#FFD700",padding:"5px 14px",borderRadius:"999px",fontFamily:"'DM Sans', sans-serif",fontSize:"13px"}}>{b}</span>))}
             </div>
           </div>
-          <button className="dl-btn" onClick={downloadResume} style={{background:"#FFD700",border:"none",borderRadius:"10px",padding:"10px 20px",color:"#0f0f14",fontFamily:"'DM Sans', sans-serif",fontSize:"14px",fontWeight:700,cursor:"pointer",display:"flex",alignItems:"center",gap:"8px",whiteSpace:"nowrap",flexShrink:0,transition:"opacity 0.2s"}}>
+          <button className="dl-btn" onClick={() => window.open('https://drive.google.com/file/d/1ohRZmqea6Eu0IhQQokinJuNCKUu4cbw2/view?usp=sharing', '_blank')} style={{background:"#FFD700",border:"none",borderRadius:"10px",padding:"10px 20px",color:"#0f0f14",fontFamily:"'DM Sans', sans-serif",fontSize:"14px",fontWeight:700,cursor:"pointer",display:"flex",alignItems:"center",gap:"8px",whiteSpace:"nowrap",flexShrink:0,transition:"opacity 0.2s"}}>
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-            download pdf
+            View Resume
           </button>
         </div>
 

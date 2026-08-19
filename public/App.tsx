@@ -8,6 +8,7 @@ import NowPage from "./pages/NowPage";
 import ThingsPage from "./pages/ThingsPage";
 import FantasyPage from "./pages/FantasyPage";
 import LotteryPage from "./pages/LotteryPage";
+import TravelPage from "./pages/TravelPage";
 
 const App: FC = () => (
   <HashRouter>
@@ -20,6 +21,7 @@ const App: FC = () => (
       <Route path="/resume" element={<ResumePage />} />
       <Route path="/now" element={<NowPage />} />
       <Route path="/things" element={<ThingsPage />} />
+      <Route path="/travel" element={<TravelPage />} />
       <Route path="*" element={<Navigate to="/" />} />
     </Routes>
   </HashRouter>

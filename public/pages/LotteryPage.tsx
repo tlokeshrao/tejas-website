@@ -15,17 +15,17 @@ interface Winner {
 }
 
 const INITIAL_CONTESTANTS: Contestant[] = [
-  { name: "Grosgab", percent: 17.3, color: THEME.palette.wheel.main, message: "Anything has to be better than last season right?" },
-  { name: "Aster", percent: 13.2, color: THEME.palette.wheel.secondary, message: "What is the point of even being in the lottery?" },
+  { name: "Grosgab", percent: 17.3, color: THEME.palette.wheel.main, message: "Anything has to be better than 2024 right?" },
+  { name: "Aster", percent: 13.2, color: THEME.palette.wheel.secondary, message: "Pay your fines" },
   { name: "Tac", percent: 12.7, color: THEME.palette.wheel.tertiary, message: "Maybe make the playoffs this year?" },
   { name: "Djez", percent: 12.2, color: THEME.palette.wheel.quaternary, message: "2026-2027 Froots Fantasy Champion!" },
-  { name: "Keshav", percent: 10.7, color: THEME.palette.wheel.quinary, message: "First year in the league and already talking trash." },
-  { name: "Pratek", percent: 9.1, color: THEME.palette.wheel.senary, message: "Drafted Pollard, Rice, BTJ, and Hubbard last year. This time keep your players." },
-  { name: "Rishi", percent: 7.6, color: THEME.palette.wheel.septenary, message: "Somehow still recovering from that keeper mistake." },
-  { name: "Vinay", percent: 6.1, color: THEME.palette.wheel.octonary, message: "Just here for the waiver wire drama." },
+  { name: "Keshav", percent: 10.7, color: THEME.palette.wheel.quinary, message: "Welcome" },
+  { name: "Pratek", percent: 9.1, color: THEME.palette.wheel.senary, message: "All his players are gonna be named aster anyway" },
+  { name: "Rishi", percent: 7.6, color: THEME.palette.wheel.septenary, message: "No Achane keeper this year" },
+  { name: "Vinay", percent: 6.1, color: THEME.palette.wheel.octonary, message: "Welcome." },
   { name: "Prote", percent: 4.6, color: THEME.palette.wheel.nonary, message: "Remember Drew Brees is not in this draft!" },
-  { name: "Moon", percent: 3.0, color: THEME.palette.wheel.denary, message: "Nico merchant. I hate Moon." },
-  { name: "Gman", percent: 2.0, color: THEME.palette.wheel.undenary, message: "The silent commissioner who never misses a pick." },
+  { name: "Moon", percent: 3.0, color: THEME.palette.wheel.denary, message: "I hate Moon." },
+  { name: "Gman", percent: 2.0, color: THEME.palette.wheel.undenary, message: "You're not getting Bijan JSN and Kyren again." },
   { name: "Boonx", percent: 1.5, color: THEME.palette.wheel.duodenary, message: "Last year's champ, last year as champ." },
 ];
 
