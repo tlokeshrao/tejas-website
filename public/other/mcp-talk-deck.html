@@ -41,8 +41,8 @@
 
   .stage{
     position:relative;
-    width:min(96vw, 177.78vh);
-    height:min(96vh, 170.67vw);
+    aspect-ratio:16/9;
+    width:min(96vw, calc(96vh * 16 / 9));
     background:var(--bg);
     border:1px solid var(--line-strong);
     border-radius:3px;
@@ -96,8 +96,8 @@
     flex:1; display:flex; gap:clamp(28px,4vw,64px);
     min-height:0; margin-top:clamp(16px,2.6vh,26px);
   }
-  .col{ flex:1; min-width:0; display:flex; flex-direction:column; justify-content:center; }
-  .col.diagram-col{ flex:1.2; align-items:center; justify-content:center; }
+  .col{ flex:1; min-width:0; display:flex; flex-direction:column; justify-content:flex-start; }
+  .col.diagram-col{ flex:1.2; align-items:center; justify-content:flex-start; }
 
   ul.trace{
     list-style:none; position:relative; padding-left:24px;
