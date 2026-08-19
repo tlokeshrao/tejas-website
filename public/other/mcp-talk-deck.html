@@ -48,6 +48,7 @@
     border-radius:3px;
     overflow:hidden;
     box-shadow:0 24px 60px rgba(28,35,49,0.18);
+    container-type:inline-size;
   }
 
   .slide{
@@ -63,7 +64,7 @@
 
   .kicker{
     font-family:var(--mono);
-    font-size:clamp(10.5px,1vw,13px);
+    font-size:clamp(14px,1.46cqw,22px);
     letter-spacing:0.11em;
     text-transform:uppercase;
     color:var(--accent, var(--navy));
@@ -79,7 +80,7 @@
   h1{
     font-family:var(--serif);
     font-weight:600;
-    font-size:clamp(24px,2.9vw,38px);
+    font-size:clamp(28px,3.75cqw,48px);
     line-height:1.2;
     letter-spacing:-0.005em;
     max-width:26ch;
@@ -108,7 +109,7 @@
     width:1px; background:var(--line-strong);
   }
   ul.trace > li{
-    position:relative; font-size:clamp(14px,1.2vw,17px);
+    position:relative; font-size:clamp(14px,1.88cqw,26px);
     line-height:1.55; color:var(--ink); font-weight:400;
   }
   ul.trace > li::before{
@@ -139,23 +140,23 @@
   }
   .diagram-frame img{ width:100%; height:auto; display:block; }
   .diagram-caption{
-    font-family:var(--mono); font-size:10.5px; color:var(--muted);
+    font-family:var(--mono); font-size:clamp(12px,1.25cqw,16px); color:var(--muted);
     text-align:center; margin-top:10px; letter-spacing:0.03em;
   }
 
   /* Title slide */
   .title-slide{ align-items:flex-start; justify-content:center; }
   .title-slide .tmark{
-    font-family:var(--mono); font-size:11.5px; letter-spacing:0.16em; color:var(--muted);
+    font-family:var(--mono); font-size:clamp(14px,1.46cqw,20px); letter-spacing:0.16em; color:var(--muted);
     text-transform:uppercase; margin-bottom:26px; display:flex; align-items:center; gap:10px;
   }
   .title-slide .tmark .dot{ width:7px;height:7px;border-radius:50%; background:var(--navy); }
-  .title-slide h1{ font-size:clamp(30px,4vw,50px); max-width:17ch; }
+  .title-slide h1{ font-size:clamp(34px,4.58cqw,60px); max-width:17ch; }
   .title-slide .rule{ width:70px; height:2px; background:var(--navy); margin:24px 0; }
-  .title-slide .subtitle{ font-family:var(--sans); font-size:clamp(15px,1.4vw,18px); color:var(--muted); }
+  .title-slide .subtitle{ font-family:var(--sans); font-size:clamp(18px,2.08cqw,28px); color:var(--muted); }
   .title-slide .protocol-strip{
     margin-top:auto; display:flex; gap:10px; flex-wrap:wrap;
-    font-family:var(--mono); font-size:10.5px; color:var(--muted);
+    font-family:var(--mono); font-size:clamp(12px,1.25cqw,16px); color:var(--muted);
   }
   .title-slide .protocol-strip span{
     border:1px solid var(--line-strong); padding:5px 11px; border-radius:2px; letter-spacing:0.03em;
@@ -171,7 +172,7 @@
     position:absolute; left:0; right:0; bottom:0; height:38px;
     display:flex; align-items:center; justify-content:space-between;
     padding:0 clamp(20px,3.2vw,42px);
-    font-family:var(--mono); font-size:10.5px; color:var(--muted);
+    font-family:var(--mono); font-size:clamp(12px,1.25cqw,16px); color:var(--muted);
     border-top:1px solid var(--line); background:var(--bg-soft);
   }
   .footer .brand{ letter-spacing:0.07em; text-transform:uppercase; }
@@ -198,9 +199,9 @@
     background:var(--bg-soft); border-top:1px solid var(--line); transition:max-height .3s ease; z-index:6;
   }
   .notes-panel.open{ max-height:36%; }
-  .notes-inner{ padding:18px clamp(20px,3.2vw,42px); font-size:13.5px; line-height:1.6; color:var(--ink); font-family:var(--sans); }
+  .notes-inner{ padding:18px clamp(20px,3.2vw,42px); font-size:clamp(14px,1.46cqw,20px); line-height:1.6; color:var(--ink); font-family:var(--sans); }
   .notes-inner .notes-label{
-    font-family:var(--mono); font-size:10px; color:var(--rust); text-transform:uppercase;
+    font-family:var(--mono); font-size:clamp(12px,1.25cqw,16px); color:var(--rust); text-transform:uppercase;
     letter-spacing:0.09em; margin-bottom:8px; display:block; font-weight:500;
   }
 
@@ -297,11 +298,11 @@ const slides = [
   type:'diagram', standout:true, accent:'var(--rust)',
   kicker:'06 — Phase 3 &middot; standout contribution', title:'UI-driven tools',
   bullets:[
-    { text:'Problem: some apps have a UI users need to see/interact with mid-flow — e.g., verifying a flow before sending results to the model' },
+    { text:'Problem: some apps need a UI users interact with mid-flow — e.g., verifying before sending results to the model' },
     { text:'Solution: render the tool\u2019s UI in its own iframe, on its own insight' },
-    { text:'New problem: the app\u2019s insight needs access to the room\u2019s context — its model and its file space' },
+    { text:'New problem: the app\u2019s insight needs access to the room\u2019s model and file space' },
     { text:'Built: the room-insight link — a single connection giving the app access to both', emph:true },
-    { text:'Separately: the SDK lets the app write its response directly back into the room\u2019s messages, since the app insight already carries the user\u2019s auth', emph:true },
+    { text:'Separately: the SDK lets the app write its response directly back into the room\u2019s messages', emph:true },
   ],
   image: IMG_ROOM_INSIGHT, caption:'Room-insight link vs. the SDK write-back path',
   notes:`This is your slowest, most detailed slide — spend real time here. Walk through the diagram and be precise about the two separate mechanisms: the room-insight link (one connection, grants access to both the room's model and file space) versus the SDK (a completely separate path that lets the app write directly to room messages, since it already has the user's auth and the room ID at render time). This precision is a good signal of technical depth — don't blur the two together.`
@@ -310,13 +311,12 @@ const slides = [
   type:'diagram', accent:'var(--indigo)',
   kicker:'07 — Workspaces', title:'The end-user experience layer',
   bullets:[
-    { text:'I owned this end to end', emph:true },
-    { text:'Concept: clients pre-host a set of MCPs in a workspace, share it with target users' },
-    { text:'Users create a chat from the workspace and automatically get everything configured — including a preset system prompt' },
+    { text:'Concept: clients pre-host MCPs in a workspace, share it with target users' },
+    { text:'Users create a chat and get everything auto-configured, including a preset system prompt' },
     { text:'Real design challenges:', sub:[
-        '<strong>Permission mismatches</strong> — workspace edit access doesn\u2019t automatically imply MCP edit access',
-        '<strong>Live vs. static tool versions</strong> — workspace had to reflect live tools, not frozen shell copies',
-        '<strong>Migrating prior efforts</strong> — e.g., an older shared PubMed vector store built before MCP existed',
+        '<strong>Permission mismatches</strong> — workspace edit access doesn\u2019t imply MCP edit access',
+        '<strong>Live vs. static tool versions</strong> — workspace must reflect live tools, not frozen copies',
+        '<strong>Migrating prior efforts</strong> — e.g., an older PubMed vector store predating MCP',
       ]},
   ],
   image: IMG_WORKSPACES, caption:'Workspace configuration inherited automatically by new chats',
